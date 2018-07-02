@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: yes
+  roles:
+  - role: angstwad.docker_ubuntu
+  tasks:
+ # - import_tasks: config.yml
+  - import_tasks: webserver.yml

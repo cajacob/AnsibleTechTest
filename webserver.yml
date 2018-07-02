@@ -1,0 +1,12 @@
+  - name: Creating docker image
+    become: yes
+    docker_image: 
+      name: nginx
+      tag: web
+      path: .
+
+  - name: starts the alpine/nginx container
+    docker_container:
+      name: web
+      image: nginx:web
+      state: started
